@@ -1,0 +1,61 @@
+
+Inner Join Syntax is,
+
+	SELECT column-name-list
+	from table-name1 
+		INNER JOIN 
+	table-name2
+	WHERE table-name1.column-name = table-name2.column-name;
+
+
+Inner JOIN query will be,
+
+	SELECT * from class, class_info where class.id = class_info.id;
+
+
+
+Left Outer Join syntax is,
+
+	SELECT column-name-list
+	from table-name1 
+	LEFT OUTER JOIN 
+	table-name2
+	on table-name1.column-name = table-name2.column-name;
+
+Left outer Join Syntax for Oracle is,
+
+	select column-name-list
+	from table-name1, 
+	table-name2
+	on table-name1.column-name = table-name2.column-name(+);
+
+
+
+Right Outer Join Syntax is,
+
+	select column-name-list
+	from table-name1 
+	RIGHT OUTER JOIN 
+	table-name2
+	on table-name1.column-name = table-name2.column-name;
+
+Right outer Join Syntax for Oracle is,
+
+	select column-name-list
+	from table-name1, 
+	table-name2
+	on table-name1.column-name(+) = table-name2.column-name;
+
+
+
+Full Outer Join Syntax is,
+
+	select column-name-list
+	from table-name1 
+	FULL OUTER JOIN 
+	table-name2
+	on table-name1.column-name = table-name2.column-name;
+
+Full Outer Join query will be like,
+
+	SELECT * FROM class FULL OUTER JOIN class_info on (class.id=class_info.id);

@@ -1,0 +1,46 @@
+*  Table create
+
+                  create table branch(branch_no varchar2(5)primary key,
+			branch_name varchar(15));
+
+                  create table emp_master(emp_no varchar2(5)primary key, 
+		       first_name varchar2(10),
+	                       middle_name varchar2(10),
+		       last_name varchar2(10));
+
+*   Display records
+                  select * from branch
+                  where branch_name='kolhapur';
+
+*   Remove only those records
+	  delete from branch
+	  where branch_name='satara';
+
+*  Update details
+	  update branch set
+	  branch_name='sangali'
+	  where branch_no=4;
+
+	update branch set
+	branch_name='mumbai'
+	where branch_no=2;
+
+* Modify the Structure of Table
+	* Enter new field in table
+		  alter  table branch 
+		  add(city varchar2(10));
+	* Drop column
+		  alter table branch
+		  drop column city;	
+	* modify table field
+		   alter table branch
+		   modify (city varchar2(30));
+	* Rename table
+		   rename branch
+		   to branch_master;
+
+* truncate table ro all rows are deleted
+	truncate table branch;
+
+* Distroy table With its records
+		drop table branch;
